@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  color: #fff;
+}
+
+.jp-text {
+  font-family: 'Noto Serif JP', serif;
+  text-shadow:
+    0 0 18px rgba(138, 43, 226, 0.9),
+    0 0 40px rgba(138, 43, 226, 0.6),
+    0 0 80px rgba(0, 0, 0, 0.8);
+}
+
+.domain-kanji {
+  font-family: 'Noto Serif JP', serif;
+  background: linear-gradient(180deg, #ffffff 0%, #b38bff 50%, #3a0f6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.9));
+  letter-spacing: 0.15em;
+}
+
+.hollow-kanji {
+  font-family: 'Noto Serif JP', serif;
+  background: linear-gradient(180deg, #ff88ff, #8a2be2 50%, #110022);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(138, 43, 222, 0.8);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px #29d3ff, 0 0 60px rgba(41, 211, 255, 0.6);
+}
+.glow-red {
+  box-shadow: 0 0 20px #ff3b3b, 0 0 60px rgba(255, 59, 59, 0.6);
+}
+.glow-purple {
+  box-shadow: 0 0 25px #b066ff, 0 0 80px rgba(138, 43, 226, 0.7);
+}
+
+.scanlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  mix-blend-mode: overlay;
+}
